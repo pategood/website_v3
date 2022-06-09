@@ -3,4 +3,4 @@
 
 // export default function loadComponent(app: any) {
 //   app.use(ElementPlus);
-// }
+// };
