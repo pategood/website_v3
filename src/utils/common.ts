@@ -37,3 +37,26 @@
 //   return num;
 // };
 // export { ToEnums, getFloat };
+
+
+/**
+ * @description 生成随机数
+ * @param min 最小值
+ * @param max 最大值
+ * @returns {number}
+ */
+export function randomNum(min: number, max: number): number {
+  let num = Math.floor(Math.random() * (min - max) + max);
+  return num;
+}
+
+/**
+ * @description 判断数据类型
+ * @param val 需要判断类型的数据
+ * @returns {string} 数据类型
+*/
+export function isType(val: any) {
+	if (val === null) return "null";
+	if (typeof val !== "object") return typeof val;
+	else return Object.prototype.toString.call(val).slice(8, -1).toLocaleLowerCase();
+}

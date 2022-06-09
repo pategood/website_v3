@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "@typescript-eslint/no-explicit-any": ["off"], // 新增这句话，关闭any报错
     "no-const-assign": 2, //禁止修改const声明的变量
     "no-dupe-keys": 2, //在创建对象字面量时不允许键重复 {a:1,a:1}
     "no-dupe-args": 2, //函数参数不能重复
@@ -26,8 +27,8 @@ module.exports = {
     "no-sparse-arrays": 2, //禁止稀疏数组， [1,,2]
     "no-unneeded-ternary": 2, //禁止不必要的嵌套 var isYes = answer === 1 ? true : false;
     "no-var": 2, //禁用var，用let和const代替
-    camelcase: 2, //强制驼峰法命名
-    eqeqeq: 2, //必须使用全等
+    "camelcase": 2, //强制驼峰法命名
+    "eqeqeq": 2, //必须使用全等
     // "quotes": [2, "single"],//引号类型 `` "" ''
     "prefer-spread": 0, //首选展开运算
     "max-len": [2, { code: 400 }], // 单个文件代码行数不得超过400行
